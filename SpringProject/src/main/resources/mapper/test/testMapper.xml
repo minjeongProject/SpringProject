@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="test">
+    <select id="selectList" parameterType="String" resultType="hashmap">
+	    SELECT
+		    adm_id,
+		    name,
+		    reject_reason_code,
+		    reject_reason,
+		    permit_yn,
+		    memo
+	    FROM
+	        Vcommerce.T_ADMIN
+	    WHERE
+	        memo != '' AND memo IS NOT NULL
+        LIMIT 10
+    </select>
+
+
+     
+</mapper>
+
+
